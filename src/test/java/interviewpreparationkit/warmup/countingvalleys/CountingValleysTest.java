@@ -13,8 +13,12 @@ public class CountingValleysTest {
         int n = 8;
         String s = "UDDDUDUU";
 
+        CountingValleys countingValleys = new CountingValleysBruteForce();
+
         //when
-        int result = CountingValleys.countingValleys(n, s);
+        int result = countingValleys.countingValleys(n, s);
+
+        //then
         assertThat(result).isEqualTo(1);
     }
 }
