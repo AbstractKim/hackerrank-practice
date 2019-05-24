@@ -7,7 +7,7 @@ public class CountingValleysCalisthenics implements CountingValleys{
      *     - One level of indentation per method
      *     - Don't use 'else' keyword
      */
-    @Override
+
     public int countingValleys(int n, String s) {
         if(n != s.length() || n == 0)
             return 0;

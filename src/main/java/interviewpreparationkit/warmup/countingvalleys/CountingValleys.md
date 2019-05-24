@@ -7,7 +7,7 @@
 ##### Output
 - number of valleys
 
-## ANALYSIS
+## Definition
 What is the definition of valleys?
    
     A valley is a sequence of consecutive steps below sea level, 
