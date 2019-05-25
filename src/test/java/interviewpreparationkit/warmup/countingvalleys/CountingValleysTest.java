@@ -14,7 +14,8 @@ public class CountingValleysTest {
         String s = "UDDDUDUU";
 
 //        CountingValleys countingValleys = new CountingValleysBruteForce();
-        CountingValleys countingValleys = new CountingValleysCalisthenics();
+//        CountingValleys countingValleys = new CountingValleysCalisthenics();
+        CountingValleys countingValleys = new CountingValleysMoreReadableWay();
 
         //when
         int result = countingValleys.countingValleys(n, s);
@@ -23,13 +24,4 @@ public class CountingValleysTest {
         assertThat(result).isEqualTo(1);
     }
 
-    @Test
-    public void test(){
-        for (int i = 0 ; i < 10 ; i++){
-            if(i == 5)
-                continue;
-            System.out.println(i);
-
-        }
-    }
 }

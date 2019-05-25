@@ -17,15 +17,15 @@ public class CountingValleysCalisthenics implements CountingValleys{
         int prevAltitude = 0;
         for(int i = 0 ; i < n; i++){
             curAltitude = getCurAltitude(i, s, curAltitude);
-            valleyCount = findValley(valleyCount, curAltitude, prevAltitude);
+            valleyCount = isFindValley(curAltitude, prevAltitude)  ? valleyCount + 1 : valleyCount;
             prevAltitude = curAltitude;
         }
 
         return valleyCount;
     }
 
-    private int findValley(int valleyCount, int curAltitude, int prevAltitude) {
-        return (prevAltitude < 0 && curAltitude == 0) ? valleyCount + 1 : valleyCount;
+    private boolean isFindValley(int curAltitude, int prevAltitude) {
+        return prevAltitude < 0 && curAltitude == 0;
     }
 
     private int getCurAltitude(int i, String s, int curAltitude){
