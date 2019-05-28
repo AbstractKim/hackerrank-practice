@@ -1,6 +1,7 @@
 package interviewpreparationkit.warmup.jumpingontheclouds;
 
-public class JumpingOnTheCloudsBruteForce implements JumpingOnTheClouds {
+public class JumpingOnCloudsCalisthenics implements JumpingOnTheClouds {
+    @Override
     public int jumpingOnCloud(int[] c) {
         int length = c.length;
         int minJump = 0;
@@ -8,12 +9,14 @@ public class JumpingOnTheCloudsBruteForce implements JumpingOnTheClouds {
             if((i+2) < length && c[i+2] == 0){
                 minJump++;
                 i = i + 2;
-            }else if( (i+1) < length && c[i+1] == 0 ){
+                continue;
+            }
+            if( (i+1) < length && c[i+1] == 0 ){
                 minJump++;
                 i = i + 1;
-            }else {
-                i++;
+                continue;
             }
+            i++;
         }
         return minJump;
     }
