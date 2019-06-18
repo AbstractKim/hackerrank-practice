@@ -1,7 +1,6 @@
 package interviewpreparationkit.warmup.jumpingontheclouds;
 
 public class JumpingOnCloudsCalisthenics implements JumpingOnTheClouds {
-    @Override
     public int jumpingOnCloud(int[] c) {
         int length = c.length;
         int minJump = 0;
